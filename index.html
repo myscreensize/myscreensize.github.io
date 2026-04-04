@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- Primary SEO -->
+  <title>My Screen Size – Detect Screen Resolution, Viewport & Device Info</title>
+  <meta name="description" content="Instantly detect your screen size, resolution, pixel density, viewport dimensions, and device type. Free online screen size checker for desktops, laptops, tablets, and mobile devices." />
+  <meta name="keywords" content="screen size detector, screen resolution checker, viewport size, pixel density, device info, monitor size, screen test, display resolution, responsive design tool, DPI checker" />
+  <meta name="author" content="MyScreenSize" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://myscreensize.github.io/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://myscreensize.github.io/" />
+  <meta property="og:title" content="My Screen Size – Screen Resolution & Device Detector" />
+  <meta property="og:description" content="Instantly detect your screen size, resolution, pixel density, viewport dimensions, and full device info. Free online tool." />
+  <meta property="og:image" content="https://myscreensize.github.io/og-image.png" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://myscreensize.github.io/" />
+  <meta name="twitter:title" content="My Screen Size – Screen Resolution & Device Detector" />
+  <meta name="twitter:description" content="Detect screen size, resolution, pixel density, viewport, and device type instantly." />
+  <meta name="twitter:image" content="https://myscreensize.github.io/og-image.png" />
+
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "My Screen Size",
+    "url": "https://myscreensize.github.io/",
+    "description": "Free online tool to detect screen size, resolution, pixel density, viewport dimensions and full device information for desktops, laptops, tablets and mobile phones.",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "All",
+    "browserRequirements": "Requires JavaScript",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "featureList": [
+      "Screen resolution detection",
+      "Viewport size measurement",
+      "Pixel density (DPI/PPI) calculation",
+      "Device type identification",
+      "Browser information detection",
+      "Color depth analysis",
+      "Orientation detection",
+      "Touch support detection"
+    ]
+  }
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Mono:wght@300;400;500&family=Cabinet+Grotesk:wght@300;400;500;700;900&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/components.css" />
+</head>
+<body>
+
+  <!-- Header injected by JS -->
+  <div id="header-root"></div>
+
+  <main>
+
+    <!-- SECTION 1: Hero -->
+    <section class="hero-section" id="hero" aria-label="Screen size detector hero">
+      <div class="hero-bg-grid"></div>
+      <div class="hero-orb orb-1"></div>
+      <div class="hero-orb orb-2"></div>
+      <div class="hero-orb orb-3"></div>
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-badge reveal-up">
+            <span class="badge-dot"></span>
+            Live Detection Active
+          </div>
+          <h1 class="hero-title reveal-up delay-1">
+            Know Your<br/><span class="gradient-text">Screen.</span><br/>Precisely.
+          </h1>
+          <p class="hero-subtitle reveal-up delay-2">
+            Instant screen size detection, viewport analysis, pixel density, device fingerprinting and more — all in real-time.
+          </p>
+          <div class="hero-actions reveal-up delay-3">
+            <a href="#live-detector" class="btn btn-primary">
+              <span>Detect My Screen</span>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a href="#features" class="btn btn-ghost">Explore Features</a>
+          </div>
+        </div>
+        <div class="hero-display reveal-right delay-2">
+          <div class="screen-mockup">
+            <div class="mockup-frame">
+              <div class="mockup-screen">
+                <div class="live-stat-card">
+                  <div class="live-label">SCREEN RESOLUTION</div>
+                  <div class="live-value" id="hero-resolution">—</div>
+                </div>
+                <div class="live-stat-card">
+                  <div class="live-label">VIEWPORT SIZE</div>
+                  <div class="live-value" id="hero-viewport">—</div>
+                </div>
+                <div class="live-stat-card">
+                  <div class="live-label">DEVICE TYPE</div>
+                  <div class="live-value" id="hero-device">—</div>
+                </div>
+                <div class="live-stat-card">
+                  <div class="live-label">PIXEL RATIO</div>
+                  <div class="live-value" id="hero-dpr">—</div>
+                </div>
+              </div>
+            </div>
+            <div class="mockup-stand"></div>
+            <div class="mockup-base"></div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-scroll-hint">
+        <div class="scroll-line"></div>
+        <span>Scroll to explore</span>
+      </div>
+    </section>
+
+    <!-- SECTION 2: Live Detector -->
+    <section class="detector-section" id="live-detector" aria-label="Live screen detector">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <div class="section-tag">REAL-TIME ANALYSIS</div>
+          <h2 class="section-title">Your Screen, Right Now</h2>
+          <p class="section-desc">All measurements update instantly as you resize your browser window.</p>
+        </div>
+
+        <div class="detector-grid reveal-up delay-1">
+          <!-- Primary card -->
+          <div class="detector-card primary-card">
+            <div class="card-glow"></div>
+            <div class="card-icon">⊡</div>
+            <div class="card-label">Screen Resolution</div>
+            <div class="card-value" id="det-resolution">Loading…</div>
+            <div class="card-sub" id="det-resolution-sub">Physical display pixels</div>
+          </div>
+
+          <div class="detector-card">
+            <div class="card-icon">◫</div>
+            <div class="card-label">Viewport Size</div>
+            <div class="card-value" id="det-viewport">Loading…</div>
+            <div class="card-sub">Browser window area</div>
+          </div>
+
+          <div class="detector-card">
+            <div class="card-icon">◈</div>
+            <div class="card-label">Device Pixel Ratio</div>
+            <div class="card-value" id="det-dpr">Loading…</div>
+            <div class="card-sub">Physical ÷ CSS pixels</div>
+          </div>
+
+          <div class="detector-card">
+            <div class="card-icon">⊞</div>
+            <div class="card-label">Color Depth</div>
+            <div class="card-value" id="det-colordepth">Loading…</div>
+            <div class="card-sub">Bits per pixel</div>
+          </div>
+
+          <div class="detector-card">
+            <div class="card-icon">⌖</div>
+            <div class="card-label">Orientation</div>
+            <div class="card-value" id="det-orientation">Loading…</div>
+            <div class="card-sub" id="det-orientation-angle">Angle: —°</div>
+          </div>
+
+          <div class="detector-card">
+            <div class="card-icon">⊙</div>
+            <div class="card-label">DPI Estimate</div>
+            <div class="card-value" id="det-dpi">Loading…</div>
+            <div class="card-sub">Dots per inch</div>
+          </div>
+
+          <div class="detector-card">
+            <div class="card-icon">⊛</div>
+            <div class="card-label">Touch Support</div>
+            <div class="card-value" id="det-touch">Loading…</div>
+            <div class="card-sub" id="det-touch-points">Touch points: —</div>
+          </div>
+
+          <div class="detector-card">
+            <div class="card-icon">⊟</div>
+            <div class="card-label">Available Screen</div>
+            <div class="card-value" id="det-avail">Loading…</div>
+            <div class="card-sub">Excl. taskbar/dock</div>
+          </div>
+        </div>
+
+        <div class="detector-copy-bar reveal-up delay-2">
+          <span id="copy-summary-text">Loading screen data…</span>
+          <button class="btn btn-copy" id="copy-btn" aria-label="Copy screen data">
+            <svg width="15" height="15" viewBox="0 0 15 15" fill="none"><rect x="4" y="4" width="8" height="8" rx="1" stroke="currentColor" stroke-width="1.2"/><path d="M3 10V3h7" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+            Copy Data
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: Device Info -->
+    <section class="device-section" id="device-info" aria-label="Device information">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <div class="section-tag">DEVICE FINGERPRINT</div>
+          <h2 class="section-title">Device & Browser Intel</h2>
+          <p class="section-desc">Deep-dive into your hardware and software environment.</p>
+        </div>
+        <div class="device-grid reveal-up delay-1">
+          <div class="device-info-panel">
+            <h3 class="panel-title">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><rect x="1.5" y="3" width="15" height="10.5" rx="1.5" stroke="currentColor" stroke-width="1.3"/><path d="M5.5 16.5h7M9 13.5v3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+              Hardware
+            </h3>
+            <ul class="info-list" id="hardware-list">
+              <li class="info-item"><span class="info-key">OS Platform</span><span class="info-val" id="hw-platform">—</span></li>
+              <li class="info-item"><span class="info-key">CPU Cores</span><span class="info-val" id="hw-cores">—</span></li>
+              <li class="info-item"><span class="info-key">Memory (approx.)</span><span class="info-val" id="hw-memory">—</span></li>
+              <li class="info-item"><span class="info-key">GPU Renderer</span><span class="info-val" id="hw-gpu">—</span></li>
+              <li class="info-item"><span class="info-key">Max Touch Points</span><span class="info-val" id="hw-touch">—</span></li>
+              <li class="info-item"><span class="info-key">Battery Status</span><span class="info-val" id="hw-battery">—</span></li>
+            </ul>
+          </div>
+
+          <div class="device-info-panel">
+            <h3 class="panel-title">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="7.5" stroke="currentColor" stroke-width="1.3"/><path d="M9 4.5v4.5l3 1.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+              Browser
+            </h3>
+            <ul class="info-list">
+              <li class="info-item"><span class="info-key">Browser</span><span class="info-val" id="br-name">—</span></li>
+              <li class="info-item"><span class="info-key">Browser Version</span><span class="info-val" id="br-version">—</span></li>
+              <li class="info-item"><span class="info-key">Engine</span><span class="info-val" id="br-engine">—</span></li>
+              <li class="info-item"><span class="info-key">Language</span><span class="info-val" id="br-language">—</span></li>
+              <li class="info-item"><span class="info-key">Cookies</span><span class="info-val" id="br-cookies">—</span></li>
+              <li class="info-item"><span class="info-key">Do Not Track</span><span class="info-val" id="br-dnt">—</span></li>
+            </ul>
+          </div>
+
+          <div class="device-info-panel">
+            <h3 class="panel-title">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 1.5C4.86 1.5 1.5 4.86 1.5 9S4.86 16.5 9 16.5 16.5 13.14 16.5 9 13.14 1.5 9 1.5z" stroke="currentColor" stroke-width="1.3"/><path d="M1.5 9h15M9 1.5a11.25 11.25 0 010 15M9 1.5a11.25 11.25 0 000 15" stroke="currentColor" stroke-width="1.3"/></svg>
+              Network & System
+            </h3>
+            <ul class="info-list">
+              <li class="info-item"><span class="info-key">Connection Type</span><span class="info-val" id="net-type">—</span></li>
+              <li class="info-item"><span class="info-key">Downlink Speed</span><span class="info-val" id="net-speed">—</span></li>
+              <li class="info-item"><span class="info-key">RTT Latency</span><span class="info-val" id="net-rtt">—</span></li>
+              <li class="info-item"><span class="info-key">Timezone</span><span class="info-val" id="sys-timezone">—</span></li>
+              <li class="info-item"><span class="info-key">Color Scheme</span><span class="info-val" id="sys-colorscheme">—</span></li>
+              <li class="info-item"><span class="info-key">Reduced Motion</span><span class="info-val" id="sys-motion">—</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: Breakpoint Visualizer -->
+    <section class="breakpoint-section" id="breakpoints" aria-label="CSS breakpoints">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <div class="section-tag">CSS BREAKPOINTS</div>
+          <h2 class="section-title">Responsive Breakpoints</h2>
+          <p class="section-desc">See which CSS breakpoints your current viewport matches in real time.</p>
+        </div>
+        <div class="breakpoint-visualizer reveal-up delay-1">
+          <div class="bp-ruler" id="bp-ruler">
+            <div class="bp-fill" id="bp-fill"></div>
+          </div>
+          <div class="bp-labels" id="bp-labels"></div>
+          <div class="bp-cards" id="bp-cards"></div>
+        </div>
+        <div class="breakpoint-table-wrap reveal-up delay-2">
+          <table class="breakpoint-table" aria-label="Breakpoint reference table">
+            <thead>
+              <tr>
+                <th>Breakpoint</th>
+                <th>Name</th>
+                <th>CSS Class</th>
+                <th>Typical Use</th>
+                <th>Your Status</th>
+              </tr>
+            </thead>
+            <tbody id="breakpoint-tbody"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: Screen Size Comparison -->
+    <section class="comparison-section" id="comparison" aria-label="Screen size comparison">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <div class="section-tag">COMPARISON TOOL</div>
+          <h2 class="section-title">Screen Size Comparison</h2>
+          <p class="section-desc">See how your screen stacks up against popular devices and resolutions.</p>
+        </div>
+        <div class="comparison-layout reveal-up delay-1">
+          <div class="comparison-canvas" id="comparison-canvas" aria-label="Visual device comparison">
+            <!-- rendered by JS -->
+          </div>
+          <div class="comparison-legend" id="comparison-legend"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: Features Grid -->
+    <section class="features-section" id="features" aria-label="Features overview">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <div class="section-tag">CAPABILITIES</div>
+          <h2 class="section-title">Everything You Need</h2>
+          <p class="section-desc">A complete toolkit for screen analysis, device profiling and responsive testing.</p>
+        </div>
+        <div class="features-grid reveal-up delay-1">
+          <div class="feature-card card-wide">
+            <div class="feat-number">01</div>
+            <div class="feat-icon-wrap">
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="2" y="4" width="24" height="16" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M9 24h10M14 20v4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <h3>Real-Time Detection</h3>
+            <p>All screen metrics update live as you resize the browser — no refresh needed. Built with native browser APIs for maximum accuracy.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feat-number">02</div>
+            <div class="feat-icon-wrap">
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="12" stroke="currentColor" stroke-width="1.5"/><path d="M14 8v6l4 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <h3>Pixel Density</h3>
+            <p>Calculate exact DPI/PPI including device pixel ratio for Retina and HiDPI displays.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feat-number">03</div>
+            <div class="feat-icon-wrap">
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M4 14h20M14 4v20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="14" cy="14" r="5" stroke="currentColor" stroke-width="1.5"/></svg>
+            </div>
+            <h3>Breakpoint Mapper</h3>
+            <p>Instantly visualize which Bootstrap, Tailwind and custom CSS breakpoints are active.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feat-number">04</div>
+            <div class="feat-icon-wrap">
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="2" y="6" width="16" height="22" rx="2" stroke="currentColor" stroke-width="1.5"/><rect x="10" y="2" width="16" height="22" rx="2" stroke="currentColor" stroke-width="1.5"/></svg>
+            </div>
+            <h3>Device Fingerprint</h3>
+            <p>Detailed device profile including OS, CPU, GPU, memory, and network information.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feat-number">05</div>
+            <div class="feat-icon-wrap">
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M6 22L14 6l8 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 17h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <h3>Export & Copy</h3>
+            <p>One-click copy of all screen data as a formatted report, ready to share or document.</p>
+          </div>
+          <div class="feature-card card-wide">
+            <div class="feat-number">06</div>
+            <div class="feat-icon-wrap">
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="2" y="2" width="10" height="24" rx="1.5" stroke="currentColor" stroke-width="1.5"/><rect x="16" y="8" width="10" height="18" rx="1.5" stroke="currentColor" stroke-width="1.5"/></svg>
+            </div>
+            <h3>Multi-Device Comparison</h3>
+            <p>Visual comparison of your current viewport against popular devices: iPhones, iPads, MacBooks, 4K monitors and more — rendered to scale.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7: How It Works -->
+    <section class="how-section" id="how-it-works" aria-label="How it works">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <div class="section-tag">UNDER THE HOOD</div>
+          <h2 class="section-title">How It Works</h2>
+          <p class="section-desc">We use native browser APIs — no tracking, no server calls, no data collection.</p>
+        </div>
+        <div class="steps-track">
+          <div class="step-item reveal-left delay-1">
+            <div class="step-num">01</div>
+            <div class="step-content">
+              <h3>Browser APIs</h3>
+              <p>We query <code>window.screen</code>, <code>window.devicePixelRatio</code>, and <code>navigator</code> APIs directly — all data stays in your browser.</p>
+            </div>
+          </div>
+          <div class="step-connector"></div>
+          <div class="step-item reveal-up delay-2">
+            <div class="step-num">02</div>
+            <div class="step-content">
+              <h3>Live Calculation</h3>
+              <p>A <code>ResizeObserver</code> and <code>resize</code> event listener keeps every metric synced with your actual browser viewport in real time.</p>
+            </div>
+          </div>
+          <div class="step-connector"></div>
+          <div class="step-item reveal-right delay-3">
+            <div class="step-num">03</div>
+            <div class="step-content">
+              <h3>Zero Storage</h3>
+              <p>Nothing is sent to any server. All detection runs purely client-side using JavaScript. Your data never leaves your device.</p>
+            </div>
+          </div>
+        </div>
+        <div class="api-chips reveal-up delay-3">
+          <span class="api-chip">window.screen</span>
+          <span class="api-chip">devicePixelRatio</span>
+          <span class="api-chip">navigator.userAgent</span>
+          <span class="api-chip">ResizeObserver</span>
+          <span class="api-chip">navigator.hardwareConcurrency</span>
+          <span class="api-chip">navigator.deviceMemory</span>
+          <span class="api-chip">navigator.connection</span>
+          <span class="api-chip">getBattery()</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 8: FAQ -->
+    <section class="faq-section" id="faq" aria-label="Frequently asked questions">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <div class="section-tag">FAQ</div>
+          <h2 class="section-title">Common Questions</h2>
+          <p class="section-desc">Everything you need to know about screen sizes and detection.</p>
+        </div>
+        <div class="faq-list reveal-up delay-1" id="faq-list">
+          <!-- injected by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 9: CTA -->
+    <section class="cta-section" id="cta" aria-label="Call to action">
+      <div class="cta-bg"></div>
+      <div class="container">
+        <div class="cta-inner reveal-up">
+          <div class="cta-badge">FREE · NO ACCOUNT NEEDED · INSTANT</div>
+          <h2 class="cta-title">Ready to Know Your Screen?</h2>
+          <p class="cta-desc">All measurements are live, accurate, and completely private. No sign-up required.</p>
+          <a href="#live-detector" class="btn btn-primary btn-large">
+            <span>Start Detection</span>
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3.75 9h10.5M10 5.25L13.75 9 10 12.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer injected by JS -->
+  <div id="footer-root"></div>
+
+  <!-- Scripts -->
+  <script src="js/header.js"></script>
+  <script src="js/footer.js"></script>
+  <script src="js/detector.js"></script>
+  <script src="js/breakpoints.js"></script>
+  <script src="js/comparison.js"></script>
+  <script src="js/device.js"></script>
+  <script src="js/faq.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
