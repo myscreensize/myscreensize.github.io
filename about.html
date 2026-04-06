@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us – My Screen Size</title>
+  <meta name="description" content="Learn more about My Screen Size, the ultimate tool for developers and designers to check screen resolution and device specs." />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Mono:wght@300;400;500&family=Cabinet+Grotesk:wght@300;400;500;700;900&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  
+  <style>
+    .about-content { padding: 160px 0 100px; }
+    .about-grid { 
+        display: grid; 
+        grid-template-columns: 1fr 1fr; 
+        gap: 60px; 
+        align-items: center;
+        margin-top: 60px;
+    }
+    .about-text h2 { font-family: var(--font-head); font-size: 2.5rem; margin-bottom: 24px; color: var(--text); }
+    .about-text p { color: var(--text-2); line-height: 1.8; margin-bottom: 20px; font-size: 1.1rem; }
+    .stat-box {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        padding: 30px;
+        border-radius: var(--radius-lg);
+        text-align: center;
+    }
+    .stat-number { font-family: var(--font-head); font-size: 3rem; font-weight: 800; color: var(--accent-3); display: block; }
+    .stat-label { color: var(--text-3); font-family: var(--font-mono); text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px; }
+    
+    @media (max-width: 992px) {
+        .about-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="header-root"></div>
+
+  <main class="about-content">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <div class="section-tag">OUR STORY</div>
+        <h1 class="section-title">Precision Meets <br/><span class="gradient-text">Simplicity</span></h1>
+        <p class="section-desc">Building the most accurate hardware detection tool for the modern web.</p>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-text reveal-left">
+          <h2>Why we built this</h2>
+          <p>In a world of infinite screen sizes and varying pixel densities, developers and designers need a reliable source of truth. My Screen Size was created to bridge the gap between complex hardware specs and easy-to-read data.</p>
+          <p>Our mission is to provide a clean, ad-free environment where anyone can instantly verify their viewport, resolution, and device capabilities without any technical friction.</p>
+        </div>
+        <div class="stats-container grid-2 reveal-right">
+          <div class="stat-box">
+            <span class="stat-number">100%</span>
+            <span class="stat-label">Client Side</span>
+          </div>
+          <div class="stat-box">
+            <span class="stat-number">0ms</span>
+            <span class="stat-label">Latency</span>
+          </div>
+          <div class="stat-box">
+            <span class="stat-number">Free</span>
+            <span class="stat-label">Forever</span>
+          </div>
+          <div class="stat-box">
+            <span class="stat-number">No</span>
+            <span class="stat-label">Tracking</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div id="footer-root"></div>
+
+  <script src="js/header.js"></script>
+  <script src="js/footer.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
