@@ -62,7 +62,7 @@
             </div>
 
             <div class="footer-col">
-              <h4>Resources</h4>
+              <h4>Pages</h4>
               <div class="footer-links">${makeLinks(FOOTER_LINKS.resources)}</div>
             </div>
           </div>
