@@ -6,7 +6,7 @@
   'use strict';
 
   const NAV_LINKS = [
-    { label: 'Detector',    href: '#live-detector' },
+    { label: 'Home',    href: '/' },
     { label: 'Device Info', href: '#device-info' },
     { label: 'Breakpoints', href: '#breakpoints' },
     { label: 'Comparison',  href: '#comparison' },
@@ -37,7 +37,7 @@
           </a>
           <nav class="header-nav" role="navigation" aria-label="Main navigation">
             ${navItems}
-            <a href="#live-detector" class="nav-cta">Detect Now</a>
+            <a href="/#live-detector" class="nav-cta">Detect Now</a>
           </nav>
           <button class="header-menu-btn" id="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-nav">
             <span class="menu-bar bar-1"></span>
@@ -48,7 +48,7 @@
       </header>
       <nav class="mobile-nav" id="mobile-nav" role="navigation" aria-label="Mobile navigation" aria-hidden="true">
         ${mobileItems}
-        <a href="#live-detector" class="mobile-nav-link" style="color: var(--accent); font-weight:700;">→ Detect Now</a>
+        <a href="/#live-detector" class="mobile-nav-link" style="color: var(--accent); font-weight:700;">→ Detect Now</a>
       </nav>
     `;
 
