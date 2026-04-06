@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us – My Screen Size</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Mono:wght@300;400;500&family=Cabinet+Grotesk:wght@300;400;500;700;900&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  
+  <style>
+    .contact-content { padding: 160px 0 100px; }
+    .contact-wrapper { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1.5fr; gap: 40px; }
+    
+    .contact-info-card {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        padding: 40px;
+        border-radius: var(--radius-lg);
+        height: fit-content;
+    }
+    .info-item { margin-bottom: 30px; }
+    .info-item h3 { font-family: var(--font-mono); color: var(--accent-3); font-size: 0.9rem; text-transform: uppercase; margin-bottom: 8px; }
+    .info-item p, .info-item a { color: var(--text); font-size: 1.1rem; text-decoration: none; }
+    .info-item a:hover { color: var(--accent); }
+
+    .contact-form {
+        background: var(--surface-2);
+        padding: 40px;
+        border-radius: var(--radius-lg);
+        border: 1px solid var(--border-2);
+    }
+    .form-group { margin-bottom: 20px; }
+    .form-group label { display: block; margin-bottom: 8px; color: var(--text-2); font-size: 0.9rem; }
+    .form-control {
+        width: 100%;
+        background: var(--bg);
+        border: 1px solid var(--border);
+        padding: 12px 16px;
+        border-radius: var(--radius);
+        color: var(--text);
+        font-family: var(--font-body);
+        transition: var(--transition);
+    }
+    .form-control:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 4px var(--accent-glow); }
+    textarea.form-control { min-height: 150px; resize: vertical; }
+
+    @media (max-width: 768px) {
+        .contact-wrapper { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="header-root"></div>
+
+  <main class="contact-content">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <div class="section-tag">GET IN TOUCH</div>
+        <h1 class="section-title">Let’s <span class="gradient-text">Connect</span></h1>
+        <p class="section-desc">Have a question about screen detection or a feature request?</p>
+      </div>
+
+      <div class="contact-wrapper">
+        <div class="contact-info-card reveal-left">
+          <div class="info-item">
+            <h3>Email Us</h3>
+            <a href="mailto:aansawaqas50@gmail.com">aansawaqas50@gmail.com</a>
+          </div>
+          <div class="info-item">
+            <h3>Github</h3>
+            <a href="https://github.com/myscreensize" target="_blank">@myscreensize</a>
+          </div>
+          <div class="info-item">
+            <h3>Response Time</h3>
+            <p>Within 24-48 hours</p>
+          </div>
+        </div>
+
+        <form class="contact-form reveal-right" action="https://formspree.io/f/aansawaqas50@gmail.com" method="POST">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" class="form-control" placeholder="John Doe" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" class="form-control" placeholder="john@example.com" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" class="form-control" placeholder="How can we help?" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary w-full">
+            <span>Send Message</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <div id="footer-root"></div>
+
+  <script src="js/header.js"></script>
+  <script src="js/footer.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
