@@ -1071,3 +1071,21 @@ table { border-collapse: collapse; width: 100%; }
   .hero-actions { flex-direction: column; }
   .hero-actions .btn { justify-content: center; }
 }
+
+/* Add this to your style.css */
+
+/* 1. Global fix for all pages using <main> */
+main {
+    padding-top: 100px; /* Adjust this value based on your actual header height */
+}
+
+/* 2. Or, if you prefer a specific utility class for legal/about/contact pages */
+.page-pt {
+    padding-top: 120px;
+}
+
+@media (max-width: 768px) {
+    main {
+        padding-top: 80px; /* Smaller spacing for mobile headers */
+    }
+}
