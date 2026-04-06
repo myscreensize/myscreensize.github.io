@@ -7,20 +7,21 @@
 
   const FOOTER_LINKS = {
     tool: [
-      { label: 'Screen Detector',   href: '#live-detector' },
-      { label: 'Device Info',       href: '#device-info' },
-      { label: 'Breakpoints',       href: '#breakpoints' },
-      { label: 'Size Comparison',   href: '#comparison' },
+      { label: 'Screen Detector',   href: '/#live-detector' },
+      { label: 'Device Info',       href: '/#device-info' },
+      { label: 'Breakpoints',       href: '/#breakpoints' },
+      { label: 'Size Comparison',   href: '/#comparison' },
     ],
     learn: [
-      { label: 'How It Works',      href: '#how-it-works' },
-      { label: 'Features',          href: '#features' },
-      { label: 'FAQ',               href: '#faq' },
+      { label: 'How It Works',      href: '/#how-it-works' },
+      { label: 'Features',          href: '/#features' },
+      { label: 'FAQ',               href: '/#faq' },
     ],
-    resources: [
-      { label: 'CSS Media Queries', href: 'https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries', external: true },
-      { label: 'Screen API (MDN)',  href: 'https://developer.mozilla.org/en-US/docs/Web/API/Screen', external: true },
-      { label: 'DPI Calculator',   href: '#live-detector' },
+    pages: [
+      { label: 'About', href: 'about' },
+      { label: 'Contact',  href: 'contact' },
+      { label: 'Privacy',   href: 'privacy' },
+      { label: 'Terms',   href: 'terms' }, 
     ],
   };
 
