@@ -18,10 +18,10 @@
       { label: 'FAQ',               href: '#faq' },
     ],
     pages: [
-      { label: 'About',             href: '/about.html' },
-      { label: 'Contact',           href: '/contact.html' },
-      { label: 'Privacy Policy',    href: '/privacy-policy.html' },
-      { label: 'Terms of Use',      href: '/terms-of-use.html' },
+      { label: 'About',             href: '/about' },
+      { label: 'Contact',           href: '/contact' },
+      { label: 'Privacy Policy',    href: '/privacy' },
+      { label: 'Terms of Use',      href: '/terms' },
     ],
   };
 
