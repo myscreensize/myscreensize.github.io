@@ -7,21 +7,21 @@
 
   const FOOTER_LINKS = {
     tool: [
-      { label: 'Screen Detector',   href: '/#live-detector' },
-      { label: 'Device Info',       href: '/#device-info' },
-      { label: 'Breakpoints',       href: '/#breakpoints' },
-      { label: 'Size Comparison',   href: '/#comparison' },
+      { label: 'Screen Detector',   href: '#live-detector' },
+      { label: 'Device Info',       href: '#device-info' },
+      { label: 'Breakpoints',       href: '#breakpoints' },
+      { label: 'Size Comparison',   href: '#comparison' },
     ],
     learn: [
-      { label: 'How It Works',      href: '/#how-it-works' },
-      { label: 'Features',          href: '/#features' },
-      { label: 'FAQ',               href: '/#faq' },
+      { label: 'How It Works',      href: '#how-it-works' },
+      { label: 'Features',          href: '#features' },
+      { label: 'FAQ',               href: '#faq' },
     ],
     pages: [
-      { label: 'About', href: 'about' },
-      { label: 'Contact',  href: 'contact' },
-      { label: 'Privacy',   href: 'privacy' },
-      { label: 'Terms',   href: 'terms' }, 
+      { label: 'About',             href: '/about.html' },
+      { label: 'Contact',           href: '/contact.html' },
+      { label: 'Privacy Policy',    href: '/privacy-policy.html' },
+      { label: 'Terms of Use',      href: '/terms-of-use.html' },
     ],
   };
 
@@ -63,7 +63,7 @@
 
             <div class="footer-col">
               <h4>Pages</h4>
-              <div class="footer-links">${makeLinks(FOOTER_LINKS.resources)}</div>
+              <div class="footer-links">${makeLinks(FOOTER_LINKS.pages)}</div>
             </div>
           </div>
 
