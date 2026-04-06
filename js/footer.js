@@ -7,15 +7,15 @@
 
   const FOOTER_LINKS = {
     tool: [
-      { label: 'Screen Detector',   href: '#live-detector' },
-      { label: 'Device Info',       href: '#device-info' },
-      { label: 'Breakpoints',       href: '#breakpoints' },
-      { label: 'Size Comparison',   href: '#comparison' },
+      { label: 'Screen Detector',   href: '/#live-detector' },
+      { label: 'Device Info',       href: '/#device-info' },
+      { label: 'Breakpoints',       href: '/#breakpoints' },
+      { label: 'Size Comparison',   href: '/#comparison' },
     ],
     learn: [
-      { label: 'How It Works',      href: '#how-it-works' },
-      { label: 'Features',          href: '#features' },
-      { label: 'FAQ',               href: '#faq' },
+      { label: 'How It Works',      href: '/#how-it-works' },
+      { label: 'Features',          href: '/#features' },
+      { label: 'FAQ',               href: '/#faq' },
     ],
     pages: [
       { label: 'About',             href: '/about' },
