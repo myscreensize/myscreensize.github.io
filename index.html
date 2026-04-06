@@ -31,6 +31,29 @@
   <!-- Schema Markup -->
   <script type="application/ld+json">
   {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "My Screen Size",
+  "url": "https://myscreensize.github.io/",
+  "description": "Instantly detect your screen size, resolution, pixel density, viewport dimensions, and device type.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "MyScreenSize",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://myscreensize.github.io/og-image.png"
+    }
+  },
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://myscreensize.github.io/?s={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+  </script>  
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
     "@context": "https://schema.org",
     "@type": "WebApplication",
     "name": "My Screen Size",
@@ -55,6 +78,79 @@
       "Touch support detection"
     ]
   }
+  </script>
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the difference between screen resolution and viewport size?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Screen resolution is the total number of physical pixels your display has (e.g., 1920×1080). Viewport size is the area of the browser window actually available for web content — it changes as you resize the browser, while your screen resolution stays fixed unless you change display settings."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is Device Pixel Ratio (DPR)?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Device Pixel Ratio is the ratio between physical pixels and CSS (logical) pixels. A DPR of 2x means your screen uses 4 physical pixels to render each 1 CSS pixel — this is what \"Retina\" and \"HiDPI\" displays do. A 1920×1080 screen with 2x DPR has an effective CSS resolution of 960×540."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does my screen resolution look different from what my OS reports?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Operating systems apply display scaling (e.g., 150% or 200% scale on Windows HiDPI screens) which changes the effective pixel count the browser sees. This tool reports both the physical screen size and the CSS viewport size so you can see the exact difference."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is DPI estimated?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We estimate DPI by multiplying the standard screen base DPI (96 DPI for most monitors) by the Device Pixel Ratio. For a true DPI reading, you would need to know the physical diagonal size of your screen in inches — which browsers do not expose for privacy reasons."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does this tool send my screen data anywhere?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Everything runs entirely in your browser using native JavaScript APIs. Nothing is sent to any server, stored in a database, or tracked in any way. Your screen data never leaves your device."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which CSS breakpoints are shown?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We show the standard Bootstrap 5 breakpoints (xs, sm, md, lg, xl, xxl) which align closely with Tailwind CSS and most modern frameworks. These are the most widely-used responsive design thresholds in the industry."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is \"Available Screen\" vs. total resolution?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "\"Available Screen\" (screen.availWidth × screen.availHeight) is the total display area minus any OS UI elements like the Windows taskbar, macOS menu bar, or dock. This is the maximum space a maximized window can occupy."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does my mobile device report different numbers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Mobile browsers often apply viewport meta tag scaling and have high DPR displays. The physical resolution on modern phones can be 3×–4× higher than the CSS viewport they report to browsers. This is intentional — websites are designed at the CSS pixel level, not the physical pixel level."
+      }
+    }
+  ]
+}
   </script>
 
   <!-- Fonts -->
