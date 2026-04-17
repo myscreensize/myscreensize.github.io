@@ -33,7 +33,7 @@
         <div class="header-inner">
           <a href="/" class="header-logo" aria-label="My Screen Size Home">
             <div class="logo-icon" aria-hidden="true">⊡</div>
-            <span>My Screen Size</span>
+            <span>Screen Resolution</span>
           </a>
           <nav class="header-nav" role="navigation" aria-label="Main navigation">
             ${navItems}
