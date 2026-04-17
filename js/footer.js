@@ -44,7 +44,7 @@
             <div class="footer-brand">
               <div class="header-logo" style="margin-bottom:14px;">
                 <div class="logo-icon" aria-hidden="true">⊡</div>
-                <span>My Screen Size</span>
+                <span>Screen Resolution</span>
               </div>
               <p class="footer-tagline">
                 The most precise free tool to detect screen resolution, viewport size, pixel density, and complete device information — right in your browser.
